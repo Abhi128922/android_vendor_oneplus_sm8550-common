@@ -51,7 +51,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/init/qspa_system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/qspa_system.rc \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
-    vendor/oneplus/sm8550-common/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
@@ -60,13 +59,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/vendor.qti.imsdatachannel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.imsdatachannel.xml \
-    vendor/oneplus/sm8550-common/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/qspa/qspa_default.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/qspa/qspa_default.rc \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/seccomp_policy/tcmd.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/tcmd.policy \
-    vendor/oneplus/sm8550-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/oneplus/sm8550-common/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
-    vendor/oneplus/sm8550-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/Oplus_QC_LTM_SM8550_2022_10_13.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/Oplus_QC_LTM_SM8550_2022_10_13.pfm \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd \
@@ -1021,30 +1017,11 @@ PRODUCT_PACKAGES += \
     libimsmedia_jni \
     libmmosal \
     libmmparser_lite \
-    libmmrtpdecoder \
-    libmmrtpencoder \
     libostatslog \
     libqcc \
     libqcc_file_agent_sys \
     libqccdme \
     libqccfileservice \
-    libwfdavenhancements \
-    libwfdclient \
-    libwfdcommonutils \
-    libwfdconfigutils \
-    libwfddisplayconfig \
-    libwfdmminterface \
-    libwfdmmsink \
-    libwfdmmsrc_system \
-    libwfdnative \
-    libwfdrtsp \
-    libwfdservice \
-    libwfdsinksm \
-    libwfduibcinterface \
-    libwfduibcsink \
-    libwfduibcsinkinterface \
-    libwfduibcsrc \
-    libwfduibcsrcinterface \
     vendor.qti.ImsRtpService-V2-ndk \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.dpmaidlservice-V1-ndk \
@@ -1054,8 +1031,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.2-halimpl \
     vendor.qti.hardware.qccsyshal@1.2 \
     vendor.qti.hardware.qccvndhal@1.0 \
-    vendor.qti.hardware.wifidisplaysession@1.0 \
-    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.ims.datachannelservice-V3-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
@@ -1155,11 +1130,9 @@ PRODUCT_PACKAGES += \
     QCC \
     QtiTelephonyService \
     SoterService \
-    WfdService \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
-    WfdCommon \
     com.android.hotwordenrollment.common.util \
     uimgbalibrary \
     uimgbamanagerlibrary \
@@ -1303,7 +1276,6 @@ PRODUCT_PACKAGES += \
     horae \
     qccsyshal@1.2-service \
     tcmd \
-    wfdservice64 \
     commcenterd \
     gauged \
     subsys_daemon \
@@ -1322,10 +1294,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
-    system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
